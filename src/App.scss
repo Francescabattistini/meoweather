@@ -1,0 +1,82 @@
+@import "./bootstrap-overrides";
+
+body {
+  background-image: url("./assets/sfondo.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  .graphic {
+    animation: fade-in 1000ms 500ms;
+    transition: all;
+    animation-fill-mode: both;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    @media (max-width: 500px) {
+      width: 300px;
+      height: 300px;
+      
+    }
+    .temperature {
+      font-size: 6em;
+      @media (max-width: 500px) {
+        font-size: 5em;
+      }
+    }
+  }
+  .next-up-section {
+    animation: fade-in 1000ms 1500ms;
+    transition: all 500ms;
+    animation-fill-mode: both;
+    @media (max-width: 1024px) {
+      overflow-x: scroll;
+    }
+    .next-up {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .details-section {
+    animation: fade-in 1000ms 2500ms;
+    transition: all 500ms;
+    animation-fill-mode: both;
+  }
+  .go-back {
+    animation: fade-in 1000ms 3500ms;
+    transition: all 500ms;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    translate: 0 -50px;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+.light {
+  background-color: #fefefe;
+  color: #441000;
+  .graphic {
+    background-color: $warning;
+  }
+  .next-up {
+    background-color: $warning;
+  }
+}
+
+.dark {
+  background-color: rgb(22, 22, 22);
+  color: #fefefe;
+  .graphic {
+    background-color: $primary;
+  }
+  .next-up {
+    background-color: $primary;
+  }
+}
